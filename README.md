@@ -38,3 +38,12 @@ timestamp | REAL | unix timestamp in milliseconds of sample
 device_id | TEXT | AWARE device ID
 duration | INTEGER | recording duration in milliseconds
 raw_audio | BLOB | raw audio data (only if save_audio_files is enabled)
+
+## License
+
+This project is a modified version of the [AWARE ambient_noise plugin](https://github.com/denzilferreira/com.aware.plugin.ambient_noise).
+
+- Original work: Copyright (c) 2011 AWARE Mobile Context Instrumentation Middleware/Framework  
+- Modifications: Copyright (c) 2025 RunGeun
+
+Licensed under the Apache License, Version 2.0. See [LICENSE](LICENSE) file for details.

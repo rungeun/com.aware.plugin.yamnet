@@ -199,3 +199,12 @@
    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
    See the License for the specific language governing permissions and
    limitations under the License.
+
+================================================================================
+
+Copyright (c) 2011 AWARE Mobile Context Instrumentation Middleware/Framework
+Copyright (c) 2025 RunGeun
+
+Original work: https://github.com/denzilferreira/com.aware.plugin.ambient_noise
+Modified work: https://github.com/rungeun/com.aware.plugin.yamnet
+This is a modified version of the AWARE ambient_noise plugin.
