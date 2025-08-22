@@ -42,7 +42,7 @@ raw_audio | BLOB | raw audio data (only if save_audio_files is enabled)
 ## License
 
 This project is a modified version of the [AWARE ambient_noise plugin](https://github.com/denzilferreira/com.aware.plugin.ambient_noise), 
-which is part of the [AWARE Framework](https://github.com/denzilferreira/aware-client).
+which is part of the [AWARE Framework](https://github.com/awareframework/aware-client).
 
 - Original work: Copyright (c) 2011 AWARE Mobile Context Instrumentation Middleware/Framework  
 - Modifications: Copyright (c) 2025 RunGeun
