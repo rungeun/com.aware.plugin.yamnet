@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:key="plugin_yamnet"
+    android:title="@string/app_name"
+    >
+    <CheckBoxPreference
+        android:defaultValue="false"
+        android:key="status_plugin_yamnet"
+        android:persistent="true"
+        android:summary="Analyzes environmental sounds using YAMNet model"
+        android:title="Active"/>
+
+    <EditTextPreference
+        android:defaultValue="5"
+        android:inputType="numberDecimal"
+        android:key="frequency_plugin_yamnet"
+        android:persistent="true"
+        android:summary="Every 5 minutes"
+        android:title="How frequently to analyze audio (in minutes)"/>
+
+    <EditTextPreference
+        android:defaultValue="1000"
+        android:inputType="number"
+        android:key="duration_plugin_yamnet"
+        android:persistent="true"
+        android:summary="Record 1000 milliseconds"
+        android:title="Audio recording duration (in milliseconds)"/>
+
+    <CheckBoxPreference
+        android:defaultValue="false"
+        android:key="save_audio_files"
+        android:persistent="true"
+        android:summary="Save audio recordings as FLAC files for AI training (local storage only)"
+        android:title="Save Audio Files"/>
+
+</PreferenceScreen>

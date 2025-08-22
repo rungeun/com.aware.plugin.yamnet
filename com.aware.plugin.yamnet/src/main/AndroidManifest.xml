@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.aware.plugin.yamnet">
+
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application>
+
+        <service
+            android:name=".Plugin"
+            android:exported="true"
+            android:label="AWARE: YAMNet"
+            android:permission="com.aware.WRITE_AWARE_SETTINGS">
+            <intent-filter>
+                <action android:name="com.aware.plugin.yamnet.ACTION_AWARE_PLUGIN_YAMNET" />
+            </intent-filter>
+        </service>
+
+        <service
+            android:name=".AudioAnalyser"
+            android:exported="false" />
+
+        <service
+            android:name=".AudioMigrationService"
+            android:exported="false" />
+
+        <activity
+            android:name=".Settings"
+            android:exported="true"
+            android:label="AWARE: YAMNet">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+
+        <provider
+            android:name=".Provider"
+            android:authorities="${applicationId}.provider.yamnet"
+            android:exported="true"
+            android:label="@string/plugin_yamnet"
+            android:readPermission="com.aware.READ_CONTEXT_DATA"
+            android:syncable="true"
+            android:writePermission="com.aware.WRITE_CONTEXT_DATA" />
+
+        <service
+            android:name=".syncadapters.Yamnet_Sync"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.content.SyncAdapter" />
+            </intent-filter>
+            <meta-data
+                android:name="android.content.SyncAdapter"
+                android:resource="@xml/sync_yamnet" />
+        </service>
+
+    </application>
+
+</manifest>
